@@ -12,6 +12,6 @@ public class ApiManager {
     }
 
     public Observable<Movies> getMovie(String API_KEY){
-        return apiInterface.getMovies(API_KEY);
+        return apiInterface.getMovies(API_KEY);//reactive.io
     }
 }
