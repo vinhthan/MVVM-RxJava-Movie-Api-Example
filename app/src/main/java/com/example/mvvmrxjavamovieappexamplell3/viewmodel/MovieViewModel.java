@@ -24,7 +24,7 @@ public class MovieViewModel extends ViewModel {
     public void getMovies(){
         apiManager.getMovie(Constants.API_KEY)
                 .subscribeOn(Schedulers.io())
-                .subscribeOn(AndroidSchedulers.mainThread())
+                .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(movie ->{
                     moviesBehaviorSubject.onNext(movie);
                 }, error ->{
